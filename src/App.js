@@ -14,7 +14,7 @@ const App = ()=>{
       
     <h1>Plan with Love</h1>
     <input className="border-black bg-slate-400" type="text" onChange={changeHandler} />
-    
+    <>hi</>
 
     </div>
   )
