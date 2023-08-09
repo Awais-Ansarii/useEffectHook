@@ -1,11 +1,18 @@
-import React from 'react'
+import React from "react";
 
-const Cards = () => {
-  return (
-    <div>
-      Cards
-    </div>
-  )
-}
+const Cards = ({ courses }) => {
+  const getDATA = () => {
+    let getAllCourses = [];
+    Object.values(courses).forEach((courseCategory) => {
+      courseCategory.forEach((course) => {
+        getAllCourses.push(course);
+      });
+    });
+    return getAllCourses;
+  };
 
-export default Cards
+  console.log(getDATA());
+  return (<div>hi</div>);
+};
+
+export default Cards;
