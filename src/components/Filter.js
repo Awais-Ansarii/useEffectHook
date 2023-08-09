@@ -2,11 +2,11 @@ import React from 'react'
 
 const Filter = ({filterData}) => {
   return (
-    <div>
+    <div className='flex justify-center mt-5'>
       {filterData.map( 
-        (data) =>{
+        (data, i) =>{
             return(
-                <button className='bg-gray-400 p-2 m-2 rounded shadow-lg'>{data.title}</button>
+                <button key={i} className='bg-gray-400 p-2 m-2 rounded shadow-lg'>{data.title}</button>
             )
         }
       )}
