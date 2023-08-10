@@ -1,6 +1,6 @@
 import React from 'react'
 
-const Filter = ({filterData}) => {
+const Filter = ({filterData, category, setcategory}) => {
   return (
     <div className='flex justify-center mt-5'>
       {filterData.map( 

@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 import Card from './Card'
 
 const Cards = ({ courses }) => {
+
+  const[likedCoursess, setLikedCourses] = useState([]);
   const getDATA = () => {
     let getAllCourses = [];
     Object.values(courses).forEach((courseCategory) => {
@@ -18,7 +20,11 @@ const Cards = ({ courses }) => {
   {getDATA().map( (course)=>{
     {/* console.log(course) */}
     return(
-      <Card course ={course} key={course.id}/>
+      <Card 
+        course ={course} key={course.id} 
+        likedCoursess={likedCoursess}
+        setLikedCourses={setLikedCourses}
+        />
     )
   }
 
